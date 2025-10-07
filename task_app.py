@@ -37,16 +37,16 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # --- 本体カード ---
-    st.markdown('<div class="kawaii-card">', unsafe_allow_html=True)
+st.markdown('<div class="kawaii-card">', unsafe_allow_html=True)
 
-    st.subheader("🧁 名前を入力してね")
-    name = st.text_input("お名前")
-    if st.button("💖 あいさつする"):
-        if name.strip():
-            st.success(f"✨ こんにちは、{name} さん！ いい一日になりますように ✨")
-            st.balloons()
-        else:
-            st.warning("お名前を入れてね 🌟")
+st.subheader("🧁 名前を入力してね")
+name = st.text_input("お名前")
+if st.button("💖 あいさつする"):
+    if name.strip():
+       st.success(f"✨ こんにちは、{name} さん！ いい一日になりますように ✨")
+       st.balloons()
+else:
+    st.warning("お名前を入れてね 🌟")
 
     st.markdown("</div>", unsafe_allow_html=True)
 
