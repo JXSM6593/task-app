@@ -23,7 +23,7 @@ h1 { margin-top: .25rem; }
 """, unsafe_allow_html=True)
 
 st.markdown("""
-<h1 style="text-align:center; margin-bottom:0;">🌸 Streamlit アプリ 🌸</h1>
+<h1 style="text-align:center; margin-bottom:0;">🌸 なおこ初アプリ 🌸</h1>
 <p style="text-align:center; color:#8c8c8c; margin-top:6px;">
   GitHub → Streamlit Cloud で公開中
 </p>
