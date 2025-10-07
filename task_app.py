@@ -102,7 +102,3 @@ st.markdown("</div>", unsafe_allow_html=True)
 # --- フッター ---
 st.caption(f"🕒 {datetime.now().strftime('%Y-%m-%d %H:%M')} / made with Streamlit")
 
-st.markdown("</div>", unsafe_allow_html=True)
-
-# --- フッター ---
-st.caption(f"🕒 {datetime.now().strftime('%Y-%m-%d %H:%M')} / made with Streamlit")
