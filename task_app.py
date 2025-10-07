@@ -31,12 +31,26 @@ input[type="text"] {
     border: 1px solid #e9d9f3 !important;
 }
 
-/* 入力欄のラッパーの背景を透明に */
+/* 入力欄のラッパー全体を透明に */
 div[data-testid="stTextInput"] {
     background-color: transparent !important;
     padding: 0 !important;
     margin: 0 !important;
     box-shadow: none !important;
+    border: none !important;
+}
+
+/* 入力欄の内側コンテナも透明に */
+div[data-testid="stTextInput"] > div {
+    background-color: transparent !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    border: none !important;
+}
+
+/* ラベル要素を完全に非表示に */
+div[data-testid="stTextInput"] label {
+    display: none !important;
 }
 
 /* Markdownコンテナの背景も透明に */
@@ -89,6 +103,6 @@ st.markdown("</div>", unsafe_allow_html=True)
 st.caption(f"🕒 {datetime.now().strftime('%Y-%m-%d %H:%M')} / made with Streamlit")
 
 st.markdown("</div>", unsafe_allow_html=True)
+
 # --- フッター ---
 st.caption(f"🕒 {datetime.now().strftime('%Y-%m-%d %H:%M')} / made with Streamlit")
-
