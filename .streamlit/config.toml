@@ -1,0 +1,6 @@
+[theme]
+primaryColor="#f08ac0"                 # ボタンなど
+backgroundColor="#fffafb"              # 背景（薄いピンク）
+secondaryBackgroundColor="#ffffff"     # カード背景
+textColor="#333333"
+font="sans serif"
