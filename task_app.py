@@ -48,11 +48,13 @@ st.markdown("""
 
 # --- 入力カード（白枠） ---
 st.markdown('<div class="kawaii-card">', unsafe_allow_html=True)
-st.subheader("🧁 名前を入力してね")
+
+# st.subheader を使わずに HTML で表示
+st.markdown('<h3 style="margin-bottom:0.5rem;">🧁 名前を入力してね</h3>', unsafe_allow_html=True)
 
 # ラベルを空にして、代わりに自分で表示
 st.markdown('<p style="margin-bottom:4px; color:#888;">お名前</p>', unsafe_allow_html=True)
-name = st.text_input("", label_visibility="collapsed")  # ← ラベルを非表示に
+name = st.text_input("", label_visibility="collapsed")
 
 if st.button("💖 あいさつする"):
     if name.strip():
@@ -60,6 +62,7 @@ if st.button("💖 あいさつする"):
         st.balloons()
     else:
         st.warning("お名前を入れてね 🌟")
+
 st.markdown("</div>", unsafe_allow_html=True)
 # --- フッター ---
 st.caption(f"🕒 {datetime.now().strftime('%Y-%m-%d %H:%M')} / made with Streamlit")
