@@ -14,13 +14,6 @@ st.markdown("""
 header[data-testid="stHeader"] { background: transparent; }
 
 /* ---------- 見た目調整 ---------- */
-.kawaii-card {
-  background: #fff; border-radius: 18px; padding: 18px 20px;
-  box-shadow: 0 6px 18px rgba(0,0,0,.06); border: 1px solid #f3eaf7;
-}
-input[type="text"]{
-  border-radius: 12px !important; border: 1px solid #e9d9f3 !important;
-}
 .stButton>button{
   border-radius: 999px; padding: .5rem 1.2rem; border: none;
   box-shadow: 0 6px 14px rgba(240,169,220,.35);
