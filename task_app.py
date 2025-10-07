@@ -4,31 +4,44 @@ from datetime import datetime
 # --- ページ設定 ---
 st.set_page_config(page_title="かわいいStreamlit", page_icon="🌸", layout="centered")
 
-# --- CSS全体スタイル ---
+# --- CSS（強化版：白枠完全ブロック） ---
 st.markdown("""
 <style>
-/* ページ全体の調整 */
+/* レイアウト調整 */
 .main .block-container { 
   padding-top: 3rem !important;
   max-width: 720px;
 }
 header[data-testid="stHeader"] { background: transparent; }
 
-/* ---------- 白枠対策 ---------- */
-/* 一旦すべての text_input を非表示にする */
-section.main div[data-testid="stTextInput"] {
-  display:none !important;
-  height:0;
-  margin:0;
-  padding:0;
-}
-/* keep-input 内だけ再表示 */
-#keep-input div[data-testid="stTextInput"] {
-  display:block !important;
-  height:auto;
+/* ---------- 白枠対策（強） ----------
+   Streamlit の text_input は実装によって
+   - div[data-testid="stTextInput"]
+   - [data-baseweb="input"]（BaseWeb）
+   - input[type="text"]
+   など異なるDOMになることがあるため、すべて一度隠す。
+*/
+section.main div[data-testid="stTextInput"],
+section.main [data-baseweb="input"],
+section.main input[type="text"] {
+  display: none !important;
+  height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
 }
 
-/* ---------- 見た目調整 ---------- */
+/* #keep-input の中だけ再表示 */
+#keep-input div[data-testid="stTextInput"],
+#keep-input [data-baseweb="input"],
+#keep-input input[type="text"] {
+  display: block !important;
+  height: auto !important;
+  margin: initial !important;
+  padding: initial !important;
+}
+
+/* ---------- 見た目（かわいい仕上げ） ---------- */
 .kawaii-card {
   background: #fff;
   border-radius: 18px;
@@ -65,7 +78,7 @@ with st.container():
 
     st.subheader("🧁 名前を入力してね")
 
-    # ✅ 表示したい入力欄だけ許可ゾーンで囲む
+    # ✅ 表示したい入力欄だけ「許可ゾーン」で囲む
     st.markdown('<div id="keep-input">', unsafe_allow_html=True)
     name = st.text_input("お名前")
     st.markdown('</div>', unsafe_allow_html=True)
@@ -81,4 +94,5 @@ with st.container():
 
 # --- フッター ---
 st.caption(f"🕒 {datetime.now().strftime('%Y-%m-%d %H:%M')} / made with Streamlit")
+
 
