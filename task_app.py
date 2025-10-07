@@ -63,7 +63,7 @@ input[type="text"]{
 with st.container():
     st.markdown('<div class="kawaii-card">', unsafe_allow_html=True)
 
-    st.subheader("🧁 お名前を入力してね")
+    st.subheader("🧁 名前を入力してね")
     name = st.text_input("お名前")
     if st.button("💖 あいさつする"):
         if name.strip():
