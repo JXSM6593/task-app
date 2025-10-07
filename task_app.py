@@ -32,7 +32,7 @@ h1 { margin-top: .25rem; }  /* タイトルが切れないように微調整 */
 """, unsafe_allow_html=True)
 
 st.markdown("""
-<h1 style="text-align:center; margin-bottom:0;">🌸 かわいい Streamlit アプリ 🌸</h1>
+<h1 style="text-align:center; margin-bottom:0;">🌸 Streamlit アプリ 🌸</h1>
 <p style="text-align:center; color:#8c8c8c; margin-top:6px;">
   GitHub → Streamlit Cloud で公開中だよ
 </p>
@@ -63,8 +63,8 @@ input[type="text"]{
 with st.container():
     st.markdown('<div class="kawaii-card">', unsafe_allow_html=True)
 
-    st.subheader("🧁 おなまえカード")
-    name = st.text_input("お名前を入力してね")
+    st.subheader("🧁 お名前を入力してね")
+    name = st.text_input("お名前")
     if st.button("💖 あいさつする"):
         if name.strip():
             st.success(f"✨ こんにちは、{name} さん！ いい一日になりますように ✨")
