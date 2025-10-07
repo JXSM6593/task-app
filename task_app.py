@@ -34,7 +34,7 @@ h1 { margin-top: .25rem; }  /* タイトルが切れないように微調整 */
 st.markdown("""
 <h1 style="text-align:center; margin-bottom:0;">🌸 Streamlit アプリ 🌸</h1>
 <p style="text-align:center; color:#8c8c8c; margin-top:6px;">
-  GitHub → Streamlit Cloud で公開中だよ
+  GitHub → Streamlit Cloud で公開中
 </p>
 """, unsafe_allow_html=True)
 
