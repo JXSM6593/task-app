@@ -36,6 +36,18 @@ st.markdown("""
 </p>
 """, unsafe_allow_html=True)
 
+st.markdown("""
+<style>
+/* …既存のCSS… */
+
+/* 先頭に出てくる“余計な”テキスト入力を強制的に非表示にする */
+section.main div[data-testid="stTextInput"]:first-of-type { display:none !important; height:0; margin:0; padding:0; }
+
+/* 念のため余白も消す */
+section.main div[data-testid="stTextInput"]:first-of-type input { display:none !important; }
+</style>
+""", unsafe_allow_html=True)
+
 # --- 本体カード ---
 with st.container():
     st.markdown('<div class="kawaii-card">', unsafe_allow_html=True)
